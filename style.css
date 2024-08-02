@@ -21,12 +21,6 @@ header{
     height: 5rem;
     align-items: center;
     justify-content: space-around;
-    border: 2px solid red;
-}
-header h2{
-    height: 50px;
-    position: relative;
-     
 }
 header ul{
     display: flex;
