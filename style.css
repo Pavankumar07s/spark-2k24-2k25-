@@ -29,8 +29,7 @@ header ul{
     background: rgba(89, 131, 83, 0.09);
      backdrop-filter: blur( 2px );
      height: 4rem;
-     width: 40rem;
-     padding: 1rem 2rem;
+     padding: 1rem 1rem;
      border-radius: 12px;
 }
 header ul li{
@@ -38,7 +37,7 @@ header ul li{
     display: flex;
     justify-content: center;
     align-items: center; 
-    padding: 2rem; 
+    padding: 2rem;
 }
 header ul li a{
     text-decoration: none;
