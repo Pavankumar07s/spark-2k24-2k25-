@@ -23,6 +23,18 @@ header{
     justify-content: space-around;
     margin: 1rem 0;
 }
+
+header button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(89, 131, 83, 0.09);
+     backdrop-filter: blur( 2px );
+     border: none;
+     height: 3rem;
+     width: 5rem;
+     border-radius: 12px;
+}
 header ul{
     display: flex;
     align-items: center;
