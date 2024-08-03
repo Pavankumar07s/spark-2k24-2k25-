@@ -5,13 +5,11 @@
 }
 
 html,body{
-    width: 100%;
-    height: 100%;
+    width: 100vw;   
+    height: 100vh;
 }
 
 .main{
-    width: 100%;
-    height: 100%;
     position: relative;
     /* overflow: hidden; */
 }
@@ -23,17 +21,27 @@ header{
     justify-content: space-around;
     margin: 1rem 0;
 }
-
-header button{
+#sparkLogo{
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+#notes{
     display: flex;
     align-items: center;
     justify-content: center;
     background: rgba(89, 131, 83, 0.09);
+    color:#B2B2B2;
      backdrop-filter: blur( 2px );
      border: none;
-     height: 3rem;
-     width: 5rem;
      border-radius: 12px;
+    font-family: "Open Sans", sans-serif;
+    font-size: larger;
+    padding: 1rem 1.1rem;
+}
+#notes span{
+    height: 4rem;
+    
 }
 header ul{
     display: flex;
@@ -54,28 +62,77 @@ header ul li{
 }
 header ul li a{
     text-decoration: none;
-    font-family: 'Kanit', sans-serif;
-    font-size: 21px;
-    color:grey;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.2rem;
+    color:#B2B2B2;
     letter-spacing: 1px;
     font-weight: 530;
     transition: ease-in-out 400ms;
 
 }
 main{
-    height: 90%;
+    height:88vh;     
     display: flex;
     justify-content: center;
     align-items: end;
     padding: 2rem 2rem;
+    padding: 2rem;
+    box-sizing: border-box;
 }
 .landingPageSpark{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center;    
     margin: 4rem 0;
+    padding: 4rem;
 }
 .landingPageSpark h1{
  font-size: 3rem;
  text-align: center;
+word-spacing: 0.7rem;
+ 
+}
+.landingPageSpark p{
+    text-align: center;
+    font-family: "Open Sans", sans-serif;
+   
+ }
+#oss{
+    display: flex;
+    align-items: center;
+    justify-content: center ;
+    background: none;
+    background-color: transparent;
+    padding: 0.5rem 1.2rem;
+    border-radius: 3rem;
+    border-color:#3A3A3A;
+}
+.ri-arrow-right-line{
+    font-size: 1.2rem;
+    margin-left: 1rem;
+}
+.ossWord {
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 5rem;
+    font-style: normal;
+    font-variation-settings:"wdth" 100;
+    margin-top: 5rem;
+    margin-bottom: 1.3rem;
+    background: linear-gradient(180deg, #FFFFFF 0%, #999999 100%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+  }
+
+#getStarted{
+    display: flex;
+    align-items: center;
+    justify-content: center ;
+    background-image: linear-gradient(20deg, #DF7841 0%, #894724 100%);
+    padding: 0.5rem 1.2rem;
+    border-radius: 0.7rem;
+    margin: 2rem;
+    font-size: 1.2rem;
+    border: none;
+    transition: 0.5s;
 }
