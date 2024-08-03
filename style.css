@@ -34,11 +34,14 @@ header{
     color:#B2B2B2;
      backdrop-filter: blur( 2px );
      border: none;
-     height: 3rem;
-     width: 5rem;
      border-radius: 12px;
     font-family: "Open Sans", sans-serif;
     font-size: larger;
+    padding: 1rem 1.1rem;
+}
+#notes span{
+    height: 4rem;
+    
 }
 header ul{
     display: flex;
