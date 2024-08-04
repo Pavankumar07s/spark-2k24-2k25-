@@ -10,14 +10,25 @@ html,body{
     height: 100vh;
 }
 
-.main{
+.main {
     position: relative;
     overflow: hidden;
-    background: url('./assets/spots.png'),url('./assets/Noise\ &\ Texture.png'),radial-gradient(#3D2F2D 0%, #101010 66%);
+    background: 
+        url('./assets/spots.png'),
+        url('./assets/Noise%20&%20Texture.png'),
+        radial-gradient(#3D2F2D 0%, #101010 66%);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size:auto;
+    animation: zoomEffect 100s linear infinite;
 }
+
+@keyframes zoomEffect {
+    0% { background-size: 100% auto; }
+    50% { background-size: 120% auto; }
+    100% { background-size: 100% auto; }
+}
+
 nav{
     z-index: 5;
 }
@@ -44,36 +55,43 @@ header{
     justify-content: center;
     background:  rgba(21, 24, 21, 0.09);;
     color:#B2B2B2;
-     backdrop-filter: blur( 2px );
-     border: none;
-     border-radius: 12px;
      z-index: 2;
     font-family: "Open Sans", sans-serif;
     font-size: larger;
     padding: 1rem 1.1rem;
+    border-radius: 12px;
+    border: 1px solid #4A4A4A;
+    background: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(2px); 
 }
 #notes:hover{
     cursor: pointer;
+}
+#notes p{
+    font-size: 16px;
 }
 #notes span{
     display: flex;
     margin-left: 1rem;
     align-content: center;
     justify-content: center;
+    
 }
 #notes img{
-    height: 1.5rem;
+    height: 1rem;
     
 }
 header ul{
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(21, 24, 21, 0.09);
-     backdrop-filter: blur( 2px );
      z-index: 2;
-     padding: 0 0.5rem;
-     border-radius: 1rem;
+     padding: 0 0.3rem;
+     border-radius: 1rem; 
+     border-radius: 12px;
+     border: 1px solid #4A4A4A;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(2px);
 }
 header ul li{
     list-style: none; 
@@ -86,7 +104,7 @@ header ul li{
 header ul li a{
     text-decoration: none;
     font-family: "Open Sans", sans-serif;
-    font-size: 1.2rem;
+    font-size: 0.9rem;
     color:#B2B2B2;
     letter-spacing: 1px;
     z-index: 5;
@@ -105,7 +123,7 @@ main{
     align-items: end;
     padding: 2rem 2rem;
     padding: 2rem;
-    /* animation: breathing 6s ease-out infinite normal; */
+    animation: breathing 100s ease-in infinite normal;
     box-sizing: border-box;
     
 }
@@ -189,9 +207,10 @@ word-spacing: 0.7rem;
     justify-self: center;
     margin-top: 6rem;
     zoom: 118%;
+    
 }
 
-/* @keyframes breathing {
+ @keyframes breathing {
     0% {
       -webkit-transform: scale(0.9);
       -ms-transform: scale(0.9);
@@ -204,18 +223,18 @@ word-spacing: 0.7rem;
       transform: scale(1);
     }
   
-    60% {
-      -webkit-transform: scale(0.9);
-      -ms-transform: scale(0.9);
-      transform: scale(0.9);
+    50% {
+      -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+      transform: scale(1.1);
     }
   
     100% {
-      -webkit-transform: scale(0.9);
-      -ms-transform: scale(0.9);
-      transform: scale(0.9);
+      -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+      transform: scale(1);
     }
-  }
+  } 
 @keyframes breathe {
     0% {
    box-shadow: 0 0 0 15px rgba(188, 237, 243, 0.3), 0 0 0 30px rgba(188, 237, 243, 0.3), 0 0 0 45px rgba(188, 237, 243, 0.3), 0 0 0 60px rgba(188, 237, 243, 0.3), 0 0 0 75px rgba(188, 237, 243, 0.3);
@@ -226,7 +245,7 @@ word-spacing: 0.7rem;
     100% {
    box-shadow: 0 0 0 15px rgba(188, 237, 243, 0.3), 0 0 0 30px rgba(188, 237, 243, 0.3), 0 0 0 45px rgba(188, 237, 243, 0.3), 0 0 0 60px rgba(188, 237, 243, 0.3), 0 0 0 75px rgba(188, 237, 243, 0.3);
     }
-   } */
+   } 
 
 .landing-page-container {
     position: absolute;
@@ -241,7 +260,7 @@ word-spacing: 0.7rem;
     background-size: cover;
     background-position: bottom;
     overflow: hidden;
-    /* zoom: 123%; */
+    zoom: 123%;
     scale: 1;
     font-family: 'Montserrat', sans-serif;
 }
