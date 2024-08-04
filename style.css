@@ -127,6 +127,18 @@ main{
     box-sizing: border-box;
     
 }
+#course{
+    position: absolute;
+    display: flex;
+    width: 100vw;
+    z-index: 5;
+    align-self: flex-start;
+    justify-content: center;
+
+}
+#course img{
+    width: 95vw;
+}
 .landingPageSpark{
     position: relative;
     z-index: 1;
@@ -218,21 +230,21 @@ word-spacing: 0.7rem;
     }
   
     25% {
-      -webkit-transform: scale(1);
-      -ms-transform: scale(1);
-      transform: scale(1);
+      -webkit-transform: scale(0.95);
+      -ms-transform: scale(0.95);
+      transform: scale(0.95);
     }
   
     50% {
-      -webkit-transform: scale(1.1);
-      -ms-transform: scale(1.1);
-      transform: scale(1.1);
+      -webkit-transform: scale(0.85);
+      -ms-transform: scale(0.85);
+      transform: scale(0.85);
     }
   
     100% {
-      -webkit-transform: scale(1);
-      -ms-transform: scale(1);
-      transform: scale(1);
+      -webkit-transform: scale(0.9);
+      -ms-transform: scale(0.9);
+      transform: scale(0.9);
     }
   } 
 @keyframes breathe {
