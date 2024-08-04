@@ -13,11 +13,13 @@ html,body{
 .main{
     position: relative;
     overflow: hidden;
-    background-image: url('./assets/Noise\ &\ Texture.png'),url('./assets/spots.png');
+    background-image: url('./assets/Noise\ &\ Texture.png');
     background-repeat: no-repeat;
-    z-index: -5;
+    background: radial-gradient(#3D2F2D 0%, #101010 69%);
+    /* background: radial-gradient( #101010, #5f5250, #101010); */
+
 }
-.main::after {
+/* .main::after {
     content: '';
     background: url('./assets/Noise\ &\ Texture.png');
     background-repeat: no-repeat;
@@ -29,9 +31,9 @@ html,body{
     opacity: 0.5;
     z-index: -5;
     animation: noiseFX 2s steps(6) infinite;
-}
+} */
 
-@keyframes noiseFX {
+/* @keyframes noiseFX {
     0% {
         transform: translate(0, 0);
     }
@@ -53,13 +55,16 @@ html,body{
     100% {
         transform: translate(0, 0);
     }
+} */
+nav{
+    z-index: 5;
 }
-
 header{
     display: flex;
     align-items: center;
     justify-content: space-around;
     margin: 1rem 0;
+    z-index: 3;
 }
 #sparkLogo{
     display: flex;
@@ -80,9 +85,13 @@ header{
      backdrop-filter: blur( 2px );
      border: none;
      border-radius: 12px;
+     z-index: 2;
     font-family: "Open Sans", sans-serif;
     font-size: larger;
     padding: 1rem 1.1rem;
+}
+#notes:hover{
+    cursor: pointer;
 }
 #notes span{
     display: flex;
@@ -100,7 +109,7 @@ header ul{
     justify-content: center;
     background: rgba(89, 131, 83, 0.09);
      backdrop-filter: blur( 2px );
-     /* height: 4rem; */
+     z-index: 2;
      padding: 0 0.5rem;
      border-radius: 1rem;
 }
@@ -108,7 +117,8 @@ header ul li{
     list-style: none; 
     display: flex;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
+    z-index: 3; 
     padding: 1.5rem;
 }
 header ul li a{
@@ -117,10 +127,15 @@ header ul li a{
     font-size: 1.2rem;
     color:#B2B2B2;
     letter-spacing: 1px;
-    font-weight: 530;
+    z-index: 5;
+    font-weight: 400;
     transition: ease-in-out 400ms;
 
 }
+header ul li:hover{
+    cursor: pointer;
+}
+
 main{
     height:88vh;     
     display: flex;
@@ -128,18 +143,18 @@ main{
     align-items: end;
     padding: 2rem 2rem;
     padding: 2rem;
-    z-index: 2;
+    
     box-sizing: border-box;
     animation: breathing 6s ease-out infinite normal;
 }
 .landingPageSpark{
-    position: absolute;
+    position: relative;
     z-index: 1;
     display: flex;
     flex-direction: column;
     align-items: center;    
-    margin: 4rem 0;
-    padding: 4rem;
+    align-self: baseline;
+    margin-top: 15rem;
 }
 .landingPageSpark h1{
  font-size: 3rem;
@@ -197,6 +212,7 @@ word-spacing: 0.7rem;
     font-size: 1.2rem;
     border: none;
     transition: 0.5s;
+    z-index: 10;
 }
 #getStarted:hover {
     cursor: pointer;
