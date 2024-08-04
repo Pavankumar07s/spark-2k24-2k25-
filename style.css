@@ -13,11 +13,10 @@ html,body{
 .main{
     position: relative;
     overflow: hidden;
-    background-image: url('./assets/Noise\ &\ Texture.png');
+    background: url('./assets/spots.png'),url('./assets/Noise\ &\ Texture.png'),radial-gradient(#3D2F2D 0%, #101010 66%);
+    background-position: center;
     background-repeat: no-repeat;
-    background: radial-gradient(#3D2F2D 0%, #101010 69%);
-    /* background: radial-gradient( #101010, #5f5250, #101010); */
-
+    background-size: cover;
 }
 /* .main::after {
     content: '';
