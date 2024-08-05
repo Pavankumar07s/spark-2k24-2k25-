@@ -1,13 +1,13 @@
 *{
-    margin: 0%;
-    padding: 0%;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-
 }
 
 html,body{
     width: 100vw;   
     height: 100vh;
+    overflow-x: hidden; 
 }
 
  .main {
@@ -18,9 +18,11 @@ html,body{
         url('./assets/Noise%20&%20Texture.png'),
         radial-gradient(#3D2F2D 0%, #101010 66%);
     background-position: center;
-    background-repeat: no-repeat;
-    background-size:auto;
+    /* background-repeat: no-repeat; */
+    background-size: cover;
     animation: zoomEffect 100s linear infinite;
+    margin: 0;
+    padding: 0;
 }
 
 @keyframes zoomEffect {
@@ -34,6 +36,7 @@ nav{
 }
 header{
     display: flex;
+    width: 100vw;
     align-items: center;
     justify-content: space-around;
     margin: 1rem 0;
@@ -53,16 +56,15 @@ header{
     display: flex;
     align-items: center;
     justify-content: center;
-    background:  rgba(21, 24, 21, 0.09);;
-    color:#B2B2B2;
-     z-index: 2;
+    color: #B2B2B2;
+    z-index: 2;
     font-family: "Open Sans", sans-serif;
     font-size: larger;
     padding: 1rem 1.1rem;
     border-radius: 12px;
     border: 1px solid #4A4A4A;
     background: rgba(255, 255, 255, 0.02);
-    backdrop-filter: blur(2px); 
+    backdrop-filter: blur(2px);
 }
 #notes:hover{
     cursor: pointer;
@@ -104,7 +106,7 @@ header ul li{
 header ul li a{
     text-decoration: none;
     font-family: "Open Sans", sans-serif;
-    font-size: 0.9rem;
+    font-size: 1rem;
     color:#B2B2B2;
     letter-spacing: 1px;
     z-index: 5;
@@ -117,7 +119,7 @@ header ul li:hover{
 }
 
 main{
-    height:88vh;   
+    height:86vh;   
     width: 100vw;  
     display: flex;
     justify-content: center;
@@ -131,11 +133,11 @@ main{
 #course{
     position: absolute;
     display: flex;
-    width: 100vw;
+    width: 95vw;
     z-index: 5;
     align-self: flex-start;
     justify-content: center;
-    padding-left: 4rem;
+    /* padding-left: 4rem; */
 
 }
 #course img{
@@ -174,7 +176,9 @@ word-spacing: 0.7rem;
     padding: 0.5rem 1.2rem;
     border-radius: 3rem;
     color:#B2B2B2;
-    border-color: #B2B2B2;
+    outline: none;
+    border: 1px solid #b2b2b2;
+    z-index: 10;
 
 }
 #oss:hover{
@@ -254,3 +258,299 @@ word-spacing: 0.7rem;
     }
   } 
 
+#sec{
+    position: absolute;
+    border: 2px solid red;
+}
+
+.page1{
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #101010;
+    overflow: hidden;
+    width: 100vw;
+  }
+  
+  .headingDiv {
+    height: 20vh;
+    width: 100vw;
+    position: relative;
+    z-index: 2000;
+    border: 2px solid rebeccapurple;
+  }
+  
+  .heading {
+    font-size: 128px;
+    color: white;
+    background-image: linear-gradient(to bottom, #FFFFFF, #101010);
+    -webkit-background-clip: text; /* For WebKit browsers */
+    background-clip: text; /* For modern browsers */
+    color: transparent; /* Make the actual text color transparent */
+    text-align: center; /* Optional: Center align the text */
+    /* padding-bottom: 10%; */
+    position: relative;
+    z-index: 2001;
+  }
+  
+  .wrap {
+    margin: 0 auto;
+    max-width: 1140px;
+  
+  }
+  
+  .left {
+    height: 30%;
+    width: 30%;
+    /* top: 10%; */
+    margin-top: 100px;
+    margin-left: 10%;
+    
+  }
+  
+  .slider-navigation {
+    position: absolute;
+    right: 50%;
+    transform: translateX(50%); 
+    height: 100vh; 
+    width: 4px;
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    z-index: 1000;
+  }
+  
+  .nav-pointer {
+    position: absolute; 
+    /* top: 50%;  */
+    right: 50%;
+    transform: translateX(50%) translateY(-50%); 
+    background: #ffffff;
+    color: rgb(0, 0, 0);
+    font-weight: 300;
+    font-size: 14px;
+    padding: 3px 8px;
+    cursor: pointer;
+    height: 44px;
+    width: 97px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1001;
+    border-radius: 8px;
+    font-family: "Space Grotesk", sans-serif;
+    border: 2px solid rebeccapurple;
+  }
+  
+  @media (max-width: 768px) {
+    .nav-pointer {
+      font-size: 10px; 
+      height: 30px; 
+      width: 60px; 
+      padding: 2px 4px; 
+    }
+  }
+  
+  
+  .orange-divider {
+    position: absolute;
+    top: calc(50% + 22px);
+    right: 50%;
+    transform: translateX(50%);
+    height: 150px;
+    width: 150px;
+    background-color: orange;
+    filter: blur(130px);
+    z-index:3000; 
+    border-radius: 50%;
+    margin-bottom: -5%;
+  }
+  
+  .site-container {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    z-index: 500;
+  }
+  
+  .content {
+    color: #fff;
+    padding: 5%;
+  }
+  section.card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30%;
+    width: 30%;
+    border: 1px solid #4A4A4A;
+    border-radius: 10px;
+    scroll-snap-align: start;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: rgba(74, 74, 74, 0.02);
+    background-image: url('noise1.png');
+    background-size: cover;
+    background-position: center;
+    font-family: "Space Grotesk", sans-serif;
+    background-repeat: no-repeat; 
+    position: relative; 
+    overflow: hidden;
+    transition: box-shadow 0.3s ease; 
+  }
+  
+  
+  section.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    filter: blur(80px);
+    border-radius: 50%;
+    height: 10%; /* Adjust the height to cover the top portion */
+    background: rgba(255, 165, 0, 0.7); /* Orange color with some transparency */
+    box-shadow: inset 0 -10px 15px rgba(255, 165, 0, 0.7); 
+    opacity: 0;
+    transition: opacity 0.3s ease; 
+  }
+  
+  section.card:hover::before {
+    opacity: 1; 
+  }
+  
+  
+  
+  .upper{
+    display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  }
+  
+  .icons{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    border: 1px solid #4A4A4A; /* Border color with 2% opacity */
+    width: 20%;
+    /* background-color: #161614; Black background */
+    padding: 2%;
+    border-radius: 5px;
+  }
+  
+  .date{
+    width: 30%;
+    font-size: 24px;
+  }
+  
+  .fa-brands.fa-square-github {
+    color: #FFFFFF; /* White icon color */
+    font-size: 24px; /* Optional: Adjust icon size as needed */
+  }
+  
+  .middle{
+    padding-top: 10%;
+  }
+  
+  .middle p{
+    color: #B4BBB8;
+  }
+  
+  .middle h1{
+    color: white;
+    padding-bottom: 3%;
+  }
+  
+  .bottom{
+    margin-top: 28px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+  
+  }
+  .button1 {
+    width: 98px;
+    height: 40px;
+    border-radius: 8px;
+    text-decoration: none;
+    border: none; /* Remove default border */
+    border: 1px solid #8A8A8A;
+    background: #4A4A4A;
+    color: #B4BBB8;
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+    box-shadow: none; /* Remove default box shadow */
+    font: inherit; /* Inherit font styles from parent */
+    cursor: pointer; /* Ensure the button has a pointer cursor */
+    display: inline-block; /* Ensure the button is treated as an inline block */
+    text-align: center; /* Center text horizontally */
+    line-height: 40px; /* Vertically center text */
+  }
+  
+  
+  .main2{
+    display: flex;
+    justify-content: column;
+    /* flex-direction: row-reverse; */
+    /* left: 10; */
+    /* gap: 10%; */
+    justify-content: space-evenly;
+  }
+  
+  .main2 .div1{
+    width: 20%;
+    /* border: 1px solid rebeccapurple; */
+  }
+  .main2 section{
+    width: 34%;
+  
+  }
+  
+  .div2{
+    display: flex;
+    justify-content: row;
+  }
+  
+  .send {
+    width: 32px; /* Adjust as needed */
+    height: 32px; /* Adjust as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent; /* Optional: adds a background to see the div */
+  }
+  .button1 i {
+    color: #ffffff; /* Make the icon white */
+    font-size: 12px; /* Adjust the size as needed */
+    margin-left: 5px; /* Optional: Add space between the text and the icon */
+  }
+  
+  .main1{
+    margin-right: 20px; /* Adjust this value to align with the progress bar */
+  }
+  
+  .main2 {
+    margin-left: 200px; /* Adjust this value to align with the progress bar */
+  }
+  
+  .nav-pointer{
+    font-weight: 600;
+  }
+
+
+
+
+
+/*Medium devices (tablets, 640px and up)
+@media only screen and (min-width: 640px) {  }
+
+/* Large devices (desktops, 1024px and up) */
+/* @media only screen and (min-width: 1024px) {  } */
+
+/* Extra large devices (large desktops, 1200px and up) */
+/* @media only screen and (min-width: 1200px) {  } */
+
+/* XXLarge devices (larger desktops, 1440px and up) */
+/* @media only screen and (min-width: 1440px) { } */
